@@ -1,0 +1,11 @@
+@if (imageList.length) {
+<div class="grid-container">
+  @for (image of imageList; track image; let index = $index;) {
+  <app-image-card [image]="image" [index]="index"></app-image-card>
+  }
+</div>
+} @else { @if (searchString) {
+<p class="no-images">We don't have images for your search request ='(</p>
+}@else {
+<p class="no-images">Ooops, seems like we can't load images...</p>
+} }

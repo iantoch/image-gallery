@@ -1,0 +1,28 @@
+<header class="header">
+  <div class="logo">
+    <p class="big-g">G</p>
+    <div class="logo-text">
+      <p>iphy</p>
+      <p>allery</p>
+    </div>
+  </div>
+  <app-search-bar (searchChange)="handleSearch($event)"></app-search-bar>
+</header>
+
+@if (isLoading) {
+<ngx-skeleton-loader
+  count="3"
+  appearance="line"
+  animation="pulse"
+  [theme]="{
+    height: '300px',
+    'background-color': '#333634',
+  }"
+>
+</ngx-skeleton-loader>
+} @else {
+<app-gallery
+  [imageList]="imageList"
+  [searchString]="searchString"
+></app-gallery>
+}

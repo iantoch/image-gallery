@@ -1,0 +1,14 @@
+<div class="card-wrapper">
+  <div class="image-title">{{ image.title }}</div>
+  <img
+    [ngSrc]="image.images.original.url"
+    [alt]="image.title"
+    [title]="image.title"
+    height="300"
+    width="300"
+    [priority]="index <= 1"
+  />
+  <div class="image-date">
+    {{ image.import_datetime | date : "dd/MM/yyyy 'at' HH:mm" }}
+  </div>
+</div>

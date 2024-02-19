@@ -1,0 +1,51 @@
+.card-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(75, 72, 72);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+
+  & img {
+    width: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  &:hover {
+    .image-title,
+    .image-date {
+      display: none;
+    }
+  }
+}
+
+.image-title,
+.image-date {
+  position: absolute;
+  background-color: rgba(32, 30, 30, 0.9);
+  max-width: 60%;
+  padding: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.image-title {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  top: 0;
+  left: 0;
+  text-align: start;
+}
+
+.image-date {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  bottom: 0;
+  right: 0;
+  text-align: end;
+}

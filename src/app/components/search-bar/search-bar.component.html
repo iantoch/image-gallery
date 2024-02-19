@@ -1,0 +1,10 @@
+<form class="search-container">
+  <input
+    class="search-input"
+    type="text"
+    placeholder="Search"
+    [formControl]="searchControl"
+    id="search-field"
+  />
+  <button class="clear-button" type="button" (click)="clearSearch()">X</button>
+</form>
